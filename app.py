@@ -10,14 +10,6 @@ import seaborn as sns
 
 page = st.sidebar.selectbox("Select Activity", ["Introduction", "Analytics","Percentage Prediction",])
 st.sidebar.text(" \n")
-st.sidebar.text(" \n")
-st.sidebar.text(" \n")
-st.sidebar.text(" \n")
-st.sidebar.text(" \n")
-
-st.sidebar.text(" \n")
-st.sidebar.text(" \n")
-
 
 
 df = pd.read_csv("DATA.csv")
@@ -27,10 +19,14 @@ pkl_file1 = open('insurancelr.pkl', 'rb')
 lr = pickle.load(pkl_file1)
 
 if page=="Introduction":
-    img= Image.open("l2.jpg")
+    img= Image.open("images\Dashboard 2.jpg")
     st.sidebar.image(img)
-
     st.header("Prediction of Insurance Premium Pay Defaulters")
+    st.text(" \n")
+    img= Image.open("images\Introduction.jpg")
+    st.image(img)
+
+
     st.subheader("1 Your client is an Insurance company and they need your help in building a model to predict whether the policyholder (customer) will pay next premium on time or not..")
 
     st.subheader("2 An insurance policy is an arrangement by which a company undertakes to provide a guarantee of compensation for specified loss, damage, illness, or death in return for the payment of a specified premium. A premium is a sum of money that you pay regularly to an insurance company for this guarantee.")
@@ -52,9 +48,11 @@ if page=="Introduction":
     st.write("  ( Insurers use credit-based insurance scores primarily in underwriting and rating of consumers. Underwriting is the process by which the insurer determines whether a consumer is eligible for coverage and rating is the process that determines how much premium to charge a consumer.underwriting simply means that your lender verifies your income, assets, debt and property details in order to issue final approval for your loan.)")
 
 if page == "Analytics" :
-    img= Image.open("l2.jpg")
+    img= Image.open("images\Dashboard 2.jpg")
     st.sidebar.image(img)
-
+    st.text(" \n")
+    img= Image.open("images\Analytics.jpg")
+    st.image(img)
     st.header("Distribution of Percentage of premium amount paid by cash or credit card")
 
     fig = px.histogram(df, x="perc_premium_paid_by_cash_credit")
@@ -99,11 +97,13 @@ if page == "Analytics" :
 
 
 if page =="Percentage Prediction" :
+    img= Image.open("images\Dashboard 2.jpg")
+    st.sidebar.image(img)
 
     st.header("Prediction of Insurance Premium Pay Defaulters")
     #st.subheader("Your client is an Insurance company and they need your help in building a model to predict whether the policyholder (customer) will pay next premium on time or not..")
     st.text(" \n")
-    img= Image.open("l2.jpg")
+    img= Image.open("images\Prediction.jpg")
     st.image(img)
     form = st.form(key='my_form2')
 
