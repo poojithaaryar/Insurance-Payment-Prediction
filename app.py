@@ -19,11 +19,11 @@ pkl_file1 = open('insurancelr.pkl', 'rb')
 lr = pickle.load(pkl_file1)
 
 if page=="Introduction":
-    img= Image.open("images\Dashboard 2.jpg")
+    img= Image.open("Dashboard 2.jpg")
     st.sidebar.image(img)
     st.header("Prediction of Insurance Premium Pay Defaulters")
     st.text(" \n")
-    img= Image.open("images\Introduction.jpg")
+    img= Image.open("Introduction.jpg")
     st.image(img)
 
 
@@ -48,10 +48,10 @@ if page=="Introduction":
     st.write("  ( Insurers use credit-based insurance scores primarily in underwriting and rating of consumers. Underwriting is the process by which the insurer determines whether a consumer is eligible for coverage and rating is the process that determines how much premium to charge a consumer.underwriting simply means that your lender verifies your income, assets, debt and property details in order to issue final approval for your loan.)")
 
 if page == "Analytics" :
-    img= Image.open("images\Dashboard 2.jpg")
+    img= Image.open("Dashboard 2.jpg")
     st.sidebar.image(img)
     st.text(" \n")
-    img= Image.open("images\Analytics.jpg")
+    img= Image.open("Analytics.jpg")
     st.image(img)
     st.header("Distribution of Percentage of premium amount paid by cash or credit card")
 
@@ -97,13 +97,13 @@ if page == "Analytics" :
 
 
 if page =="Percentage Prediction" :
-    img= Image.open("images\Dashboard 2.jpg")
+    img= Image.open("Dashboard 2.jpg")
     st.sidebar.image(img)
 
     st.header("Prediction of Insurance Premium Pay Defaulters")
     #st.subheader("Your client is an Insurance company and they need your help in building a model to predict whether the policyholder (customer) will pay next premium on time or not..")
     st.text(" \n")
-    img= Image.open("images\Prediction.jpg")
+    img= Image.open("Prediction.jpg")
     st.image(img)
     form = st.form(key='my_form2')
 
